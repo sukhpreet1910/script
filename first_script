@@ -1,0 +1,15 @@
+# echo "Executing" >> test_file.txt
+
+
+# Asking user 
+read -p "Do you want to play rock-paper-scissors (yes/no)? " answer
+
+# Converting to lowercase
+answer=$(tr [A-Z] [a-z] <<< "$answer") 
+
+if [[ "$answer" == "yes" ]]; 
+then
+  python3 rock_paper_scissors.py
+else
+  echo "That's too bad, maybe next time!"
+fi
